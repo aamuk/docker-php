@@ -1,7 +1,6 @@
 <?php
 
-class Dog
-{
+class Dog {
     public $name;
     public $likes;
     public $owner;
@@ -17,8 +16,7 @@ class Dog
         $this->owner = $owner;
     }
 
-    public function dogLikes()
-    {
+    public function dogLikes() {
         echo $this->name . " " . "likes" . " " . $this->likes;
     }
 

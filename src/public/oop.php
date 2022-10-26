@@ -1,36 +1,28 @@
 <?php
 
-echo "<h1><u>OOP</u></h1><p><i>Page <strong>31</strong></i></p><hr>";
+echo "<h1><u>OOP</u></h1><p><i>Page <strong>34</strong></i></p><hr>";
 
 class ShopProduct
 {
-    public $title;
-    public $producerMainName;
-    public $producerFirstName;
-    public $price = 0;
-
     public function __construct(
-        $title,
-        $firstName,
-        $mainName,
-        $price
-    )
-    {
-        $this->title = $title;
-        $this->producerFirstName = $firstName;
-        $this->producerMainName = $mainName;
-        $this->price = $price;
+        public $title,
+        public $firstName,
+        public $mainName,
+        public $price
+    ) {
     }
 
     public function getProducer()
     {
-        return $this->producerFirstName . " " . $this->producerMainName;
+        return $this->firstName . " " . $this->mainName;
     }
 }
 
 $product1 = new ShopProduct(
-    "Banana",
-    "Smith",
-    "Dave",
-    12
+    "Pear",
+    "Alex",
+    "Beaumont",
+    1
     );
+
+echo($product1->getProducer());
