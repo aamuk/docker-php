@@ -1,14 +1,14 @@
 <?php
 
-echo "<h1><u>OOP</u></h1><p><i>Page <strong>34</strong></i></p><hr>";
+echo "<h1><u>OOP</u></h1><p><i>Page <strong>36</strong></i></p><hr>";
 
 class ShopProduct
 {
     public function __construct(
         public $title,
-        public $firstName,
-        public $mainName,
-        public $price
+        public $firstName = "Bob",
+        public $mainName = "",
+        public $price = 0
     ) {
     }
 
@@ -19,10 +19,13 @@ class ShopProduct
 }
 
 $product1 = new ShopProduct(
-    "Pear",
-    "Alex",
-    "Beaumont",
-    1
+    price: 99,
+    title: "Orange"
+
+    
     );
 
+ 
 echo($product1->getProducer());
+
+
